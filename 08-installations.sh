@@ -5,12 +5,12 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
     echo "Please run this script with root access."
-    exit 1 # manually exit if error comes.
+    exit 1 # manually exit if error comes.  # beacuse shell script will continue to run even if error occurs., so check exit status
 else
     echo "You are super user."
 fi
 
-dnf install mysql -y
+dnf install mysqll -y
 
 if [ $? -ne 0 ]
 then
