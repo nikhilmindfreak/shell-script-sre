@@ -1,0 +1,8 @@
+# SHELL SCRIPY
+
+**STEPS**
+* CREATE REPO 
+
+
+
+
