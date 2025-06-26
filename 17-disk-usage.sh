@@ -10,12 +10,12 @@ do
     FOLDER=$(echo $line | awk -F " " '{print $NF}')
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
-        MESSAGE+="$FOLDER is more than $DISK_THRESHOLD, Current usage: $USAGE \n"
+        MESSAGE+="$FOLDER is more than $DISK_THRESHOLD, Current usage: $USAGE \n" #message + = is used to append the message
     fi
 done <<< $DISK_USAGE
 
 echo -e "Message: $MESSAGE"
 
-#echo "$MESSAGE" | mail -s "Disk Usage Alert" info@joindevops.com
+echo "$MESSAGE" | mail -s "Disk Usage Alert" info@joindevops.com
 
 # echo "body" | mail -s "subject" to-address
