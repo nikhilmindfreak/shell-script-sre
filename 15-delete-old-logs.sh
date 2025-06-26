@@ -18,7 +18,9 @@ fi
 
 FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14) # - name "*.log" is used to find all log files in the directory, -mtime +14 is used to find files older than 14 days   
 
-while IFS= read -r line
+
+# while loop to iterate over each file found by the find command
+while IFS= read -r line # IFS is used to set the internal field separator, read -r is used to read the line without interpreting backslashes
 do
     echo "Deleting file: $line"
     rm -rf $line
