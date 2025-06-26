@@ -3,10 +3,10 @@
 set -e # Exit immediately if a command exits with a non-zero status.
 
 failure(){
-    echo "Failed at $1: $2"
+    echo "Failed at $1: $2" # Function to handle errors $1 for first aru lineno and $2 for second aru command bash_command
 }
 
-trap 'failure ${LINENO} "$BASH_COMMAND"' ERR  # Trap errors and call the failure function with line number and command
+trap 'failure ${LINENO} "$BASH_COMMAND"' ERR  # trap command Trap errors and call the failure function with line number and command
 
 USERID=$(id -u) #ERR
 
