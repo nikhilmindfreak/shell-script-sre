@@ -1,5 +1,5 @@
 #!/bin/bash
-
+source ./16-count-word.sh
 # Usage check
 if [ $# -ne 2 ]; then
     echo "Usage: $0 file.doc word"
